@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grateful</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        
+        <section>
+            <h2>What are you grateful for?</h2>
+            <div class="link-container">
+                Brainstorm juice: 
+                <a href="https://www.youtube.com/watch?v=uY8ENJK0hvM" target="_blank">Yum</a> / 
+                <a href="https://www.youtube.com/watch?v=Khd-uyOuhGo" target="_blank">Yummier</a> / 
+                <a href="https://www.youtube.com/watch?v=slxPFAJN9UM" target="_blank">Ur a wizard!</a>
+
+            </div>
+            
+            
+            <form id="memoryForm">
+                <select id="memoryCategory" required>
+                    <option value="family">Family</option>
+                    <option value="friends">Friends</option>
+                    <option value="community">Community</option>
+                    <option value="nature">Nature</option>
+                    <option value="health">Health</option>
+                    <option value="memories">Memories</option>
+                    <option value="love">Love</option>
+                    <option value="life">Life</option>
+                    <option value="animal relations">Animal Relations</option>
+                    <option value="fortune">Fortune</option>
+                    <option value="luck">Luck</option>
+                    <option value="mind">Mind</option>
+                    <option value="body">Body</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="culture">Culture</option>
+                </select>
+
+                <textarea id="memoryText" placeholder="Share your memory..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search......">
+        </div>
+        
+
+        <section>
+            <ul id="memoriesList">
+                <!-- Memories will be populated here with the format:
+                <li>
+                    [Memory Content]
+                    <button class="deleteBtn">🗑️</button>
+                </li>
+                -->
+            </ul>
+        </section>
+
+        <!-- Custom Modal -->
+        <div class="custom-modal" id="customModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <p id="modalMessage">AHOY! There be a problem here? We'll send minions to invade its space, and discern with sound mind how best to move fo-ward. Kindly!</p>
+            </div>
+        </div>
+
+    
+    </main>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
