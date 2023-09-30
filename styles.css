@@ -119,28 +119,31 @@ ul {
 }
 
 li {
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0.5rem;
     transition: transform 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem; /* Increase padding for larger boxes */
+    font-size: 1.2em; /* Increase font size for better readability */
 }
 
 li:hover {
-    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-.vote-count {
-    margin-right: 10px;
-    font-weight: bold;
-}
+
 
 .emoji-actions {
     float: right;
+    margin-left: 20px; /* Add some space between the memory text and the emojis */
 }
 
+/* Increase the size of the emojis for better visibility */
 .emoji {
-    margin-left: 10px;
+    font-size: 1.5em; /* Increase emoji size */
+    margin-left: 15px; /* Add some space between the emojis */
     cursor: pointer;
 }
 
@@ -337,4 +340,20 @@ select {
 .glow {
     transition: box-shadow 0.5s ease-in-out !important;
     box-shadow: 0 0 20px #fec93d, 0 0 30px #fec93d !important;
+}
+
+.vote-count {
+    margin-right: 15px; /* Add some space between the vote count and the emojis */
+    font-weight: bold;
+    font-size: 1.2em; /* Increase font size for better readability */
+}
+
+/* Ensure the memory content doesn't overlap with the emojis */
+li strong, li .vote-count {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 70%; /* Limit the width to prevent overlap with the emojis */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Display '...' for long sentences */
+    white-space: nowrap; /* Prevent wrapping to the next line */
 }
