@@ -67,15 +67,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         upvoteBtn.addEventListener('click', function() {
 
-           
+            console.log("Upvote button clicked!");
+
+            li.classList.add('glow');
+        
+            setTimeout(() => {
+                li.classList.remove('glow');
+            }, 2000);
+        
+
             const memoryRef = db.ref('memories/' + key);
             memoryRef.transaction(memory => {
                 if (memory) {
                     memory.upvotes = (memory.upvotes || 0) + 1;
                 }
                 return memory;
-                
             });
+
+ li.classList.add('glow');
+
+ setTimeout(() => {
+     li.classList.remove('glow');
+ }, 1500);
+                
+        
         });
 
         downvoteBtn.addEventListener('click', function() {
@@ -213,3 +228,4 @@ function sortMemories(criteria) {
 
 
 });
+

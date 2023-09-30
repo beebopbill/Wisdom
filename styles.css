@@ -17,6 +17,7 @@
     }
 }
 
+
 h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4em; /* Adjust size as needed */
@@ -331,4 +332,9 @@ select {
 
 #memoriesList li {
     transition: all 0.3s ease;
+}
+
+.glow {
+    transition: box-shadow 0.5s ease-in-out !important;
+    box-shadow: 0 0 20px #fec93d, 0 0 30px #fec93d !important;
 }
